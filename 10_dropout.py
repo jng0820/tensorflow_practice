@@ -57,6 +57,6 @@ for epoch in range(training_epochs):
 
 correct_prediction = tf.equal(tf.argmax(hypothesis, 1), tf.argmax(Y, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-print('Accuracy:', sess.run(accuracy, feed_dict={
+print('Accuracy : ', sess.run(accuracy, feed_dict={
       X: mnist.test.images, Y: mnist.test.labels, keep_prob : 1}))
 
